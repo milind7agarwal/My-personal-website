@@ -1,358 +1,539 @@
-/* --- Global Reset & High-Tech Core --- */
+/* --- Root Setup & Palette Declarations --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    background-color: #f8fafc; /* Beautiful soft minimalist background canvas */
+    color: #0f172a; /* Slate 900 primary tone */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 4rem 0;
-    background-color: #030308;
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(155, 81, 224, 0.08) 0%, transparent 40%);
-    font-family: 'Inter', sans-serif;
-    color: #ffffff;
-    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-main {
-    width: 90%;
-    max-width: 1200px;
-    background: rgba(10, 10, 20, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    padding: 3rem;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+/* --- Navigation System Layout --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(248, 250, 252, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* --- Typography --- */
-.name {
-    font-family: 'Orbitron', sans-serif;
-    color: #ffffff;
-    font-size: 2.8rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #fff, #8a8a9e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 2rem;
-}
-
-.proj {
-    font-family: 'Orbitron', sans-serif;
-    color: #00f2fe;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 3.5rem 0 1.5rem 0;
-    position: relative;
-}
-
-/* --- Hero Section --- */
-.description {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 20px;
-}
-
-.img {
-    height: 14rem;
-    width: 14rem;
-    object-fit: cover;
-    border-radius: 16px;
-    border: 2px solid rgba(0, 242, 254, 0.3);
-    box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
-}
-
-.desc {
-    color: #b4b4c7;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-/* --- Interactive Hologram Buttons --- */
-button {
-    background: transparent;
-    color: #00f2fe;
-    border: 1px solid #00f2fe;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 14px 35px;
-    border-radius: 8px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 0 10px rgba(0, 242, 254, 0.1);
-}
-
-button:hover {
-    background: #00f2fe;
-    color: #000;
-    box-shadow: 0 0 25px rgba(0, 242, 254, 0.5);
-    transform: translateY(-2px);
-}
-
-/* --- 3D Grid Perspective Project Cards --- */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    perspective: 1000px; /* Activates pure 3D canvas zone */
-}
-
-.card {
-    background: rgba(20, 20, 35, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.3s, box-shadow 0.3s;
-    transform-style: preserve-3d;
-}
-
-.card:hover {
-    /* Dynamic 3D Spatial Tilt Simulation on hover */
-    transform: rotateX(6deg) rotateY(-4deg) translateY(-8px);
-    border-color: rgba(0, 242, 254, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 242, 254, 0.15);
-}
-
-.card-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-.card:hover .card-img {
-    opacity: 1;
-}
-
-.card-title {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    line-height: 1.4rem;
-}
-
-.card-info {
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-    color: #a0a0ba;
-    flex-grow: 1;
-}
-
-.proj-link {
-    color: #00f2fe;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-decoration: none;
-    align-self: inline-start;
-    transition: transform 0.2s;
-}
-
-.proj-link:hover {
-    transform: translateX(5px);
-    text-shadow: 0 0 8px #00f2fe;
-}
-
-/* --- Adaptive Skills Grid --- */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 1.25rem;
-    width: 100%;
-}
-
-.skill-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.2rem;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.skill-card img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    margin-bottom: 0.75rem;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
-}
-
-.skill-card p {
-    color: #e2e2ec;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.skill-card:hover {
-    transform: scale(1.08) translateY(-4px);
-    background: rgba(0, 242, 254, 0.03);
-    border-color: rgba(0, 242, 254, 0.3);
-    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1);
-}
-
-/* --- Unified Modern Footer Architecture --- */
-.connect-footer-wrapper {
+.nav-container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 4rem;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
 }
 
-.contact {
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    color: #475569;
+    cursor: pointer;
+}
+
+/* --- Container Architecture --- */
+.main-content {
+    max-width: 640px; /* Aligned strict column narrative width matches sample image */
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+/* --- Hero Frame --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #2563eb;
+    border-radius: 50%;
+}
+
+.hero-name {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 1.25rem;
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #475569;
+    margin-bottom: 1.75rem;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Modern Buttons Architecture --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
     flex: 1;
 }
 
-.contact .proj {
-    margin-top: 0;
+.btn-primary:hover {
+    background-color: #1e293b;
 }
 
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+.btn-secondary {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    flex: 1;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
 
-.social-icon {
-    width: 50px;
-    height: 50px;
+.btn-secondary:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* --- Asymmetric Floating Graphic Architecture --- */
+.graphic-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #c7d2fe 0%, #e0e7ff 100%);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.social-icon img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-    transition: filter 0.3s;
+.canvas-block {
+    color: #6366f1;
+    opacity: 0.6;
 }
 
-/* Targeted Neon Backlight Brand Identity Highlights */
-#linkedin:hover { background: #0077b5; border-color: #0077b5; box-shadow: 0 0 15px #0077b5; transform: translateY(-3px); }
-#github:hover { background: #333; border-color: #555; box-shadow: 0 0 15px rgba(255,255,255,0.2); transform: translateY(-3px); }
-#twitter:hover { background: #ffffff; border-color: #ffffff; box-shadow: 0 0 15px #ffffff; transform: translateY(-3px); }
-#twitter:hover img { filter: invert(1); }
-#email:hover { background: #ff9800; border-color: #ff9800; box-shadow: 0 0 15px #ff9800; transform: translateY(-3px); }
-
-/* Right Section: Contact Form UI */
-.contact-section {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    padding: 2rem;
-    border-radius: 16px;
+.floating-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    max-width: 240px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-.contact-section h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #fff;
-    font-size: 1.3rem;
+.floating-title {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.floating-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #0f172a;
+}
+
+/* --- Typography Group Headers --- */
+.section-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.section-subtext {
+    font-size: 0.9rem;
+    color: #64748b;
     margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
 }
 
-form {
+/* --- Technical Skills Tile Sets --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.skill-tile {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.skill-tile span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* Skill Tile Brand Identifiers */
+.text-blue { color: #2563eb; }
+.text-indigo { color: #4f46e5; }
+.text-cyan { color: #0891b2; }
+.text-purple { color: #9333ea; }
+.text-teal { color: #0d9488; }
+.text-green { color: #16a34a; }
+
+/* --- Case Study Works Display Section --- */
+.works-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.explore-link:hover {
+    text-decoration: underline;
+}
+
+.projects-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.proj-img-holder {
+    width: 100%;
+    height: 220px;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.proj-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.proj-content {
+    padding: 1.25rem;
+}
+
+.proj-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.proj-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.proj-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.case-study-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.case-study-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Contact & Communication Portal Layout --- */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 3rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.info-icon-box {
+    color: #64748b;
+    display: flex;
+    align-items: center;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.square-btn {
+    width: 38px;
+    height: 38px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.square-btn:hover {
+    background-color: #f8fafc;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+/* --- Clean Form Field Architecture --- */
+.interactive-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #475569;
 }
 
 input, textarea {
     width: 100%;
-    padding: 14px 16px;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    padding: 0.65rem 0.75rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #0f172a;
+    transition: all 0.2s ease;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #00f2fe;
-    box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 
 textarea {
     resize: none;
 }
 
-#con {
-    background: #ff9800;
-    color: #000;
+.submit-btn {
+    background-color: #000000;
+    color: #ffffff;
     border: none;
-    font-weight: 700;
-    box-shadow: 0 4px 14px rgba(255, 152, 0, 0.3);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 0.25rem;
 }
 
-#con:hover {
-    background: #fff;
-    color: #000;
-    border: none;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+.submit-btn:hover {
+    background-color: #1e293b;
 }
 
-/* --- Media Queries / Bulletproof Responsiveness --- */
-@media (max-width: 968px) {
-    .connect-footer-wrapper {
-        flex-direction: column;
-        gap: 3rem;
+/* --- Footer Platform Framework --- */
+.footer {
+    border-top: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-branding {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    color: #475569;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #2563eb;
+}
+
+/* --- Responsive Adaptations --- */
+@media (max-width: 520px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
     
-    .description {
+    .hero-cta-group {
         flex-direction: column;
-        text-align: center;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 1.5rem;
-        width: 95%;
-    }
-    .name {
-        font-size: 2rem;
-    }
-    .proj {
-        font-size: 1.4rem;
     }
 }
