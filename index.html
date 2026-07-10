@@ -1,234 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milind Agarwal | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Milind Agarwal | Software Developer & QML Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                <span>DevPortfolio</span>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle Menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="material-symbols-outlined icon-code" data-icon="code">code</span>
+                <span class="logo-text">DevPortfolio</span>
+            </div>
+            <nav class="nav-menu">
+                <a class="nav-link active" href="#hero">Home</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="btn btn-primary btn-nav" href="#contact">Contact</a>
+            </nav>
+            <button class="menu-mobile-btn">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
             </button>
         </div>
-    </nav>
+    </header>
 
-    <main class="main-content">
+    <main class="main-container">
         
-        <section class="hero-section">
-            <div class="status-badge">
-                <span class="badge-dot"></span>
-                Available for new opportunities
-            </div>
-            
-            <h1 class="hero-name">Milind Agarwal</h1>
-            <p class="hero-subtitle">Software Developer & QML Researcher</p>
-            
-            <p class="hero-desc">
-                Specializing in building scalable web architectures and exploring the frontiers of Quantum Machine Learning. Dedicated to writing clean, maintainable code that solves real-world problems. Delivered 3 end-to-end web applications and a QkSVM pipeline benchmarked on LFW at NIT Surat.
-            </p>
-
-            <div class="hero-cta-group">
-                <a href="MilindCV.pdf" download class="btn btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V15"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    Download CV
-                </a>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
-            </div>
-
-            <div class="graphic-wrapper">
-                <div class="canvas-block">
-                    <svg class="canvas-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="badge-text">Available for new opportunities</span>
                 </div>
-                <div class="floating-badge">
-                    <span class="floating-title">FOCUS AREAS</span>
-                    <p class="floating-text">Cloud Architecture, Quantum Computing, Full-Stack Development</p>
+                <h1 class="hero-title">Milind Agarwal</h1>
+                <h2 class="hero-subtitle">Software Developer & QML Researcher</h2>
+                <p class="hero-description">
+                    Specializing in building scalable web architectures and exploring the frontiers of Quantum Machine Learning. Dedicated to writing clean, maintainable code that solves real-world problems.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-with-icon" href="#">
+                        <span class="material-symbols-outlined" data-icon="download">download</span>
+                        Download CV
+                    </a>
+                    <a class="btn btn-outline" href="#projects">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-frame">
+                    <img class="avatar-img" data-alt="A professional headshot of a software developer with a friendly and confident expression." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+                </div>
+                <div class="floating-focus-box">
+                    <p class="focus-title">Focus Areas</p>
+                    <p class="focus-body">Cloud Architecture, Quantum Computing, Full-Stack Development</p>
                 </div>
             </div>
         </section>
 
-        <section class="tech-stack-section">
-            <h2 class="section-heading">Tech Stack</h2>
-            <p class="section-subtext">Tools and technologies I use to bring ideas to life.</p>
-            
+        <section class="skills-section" id="skills">
+            <div class="section-heading">
+                <h3 class="section-title">Tech Stack</h3>
+                <p class="section-subtitle">Tools and technologies I use to bring ideas to life.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-tile">
-                    <svg class="skill-icon text-blue" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M20 7h-9m9 4h-12m12 4h-9M4 7h2m-2 4h2m-2 4h2M4 19h16"/></svg>
-                    <span>TypeScript</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="terminal">terminal</span>
+                    <span class="skill-name">TypeScript</span>
                 </div>
-                <div class="skill-tile">
-                    <svg class="skill-icon text-indigo" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
-                    <span>PostgreSQL</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="database">database</span>
+                    <span class="skill-name">PostgreSQL</span>
                 </div>
-                <div class="skill-tile">
-                    <svg class="skill-icon text-cyan" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                    <span>AWS</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="cloud">cloud</span>
+                    <span class="skill-name">AWS</span>
                 </div>
-                <div class="skill-tile">
-                    <svg class="skill-icon text-purple" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    <span>Qiskit</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="functions">functions</span>
+                    <span class="skill-name">Qiskit</span>
                 </div>
-                <div class="skill-tile">
-                    <svg class="skill-icon text-teal" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
-                    <span>React / Next.js</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="layers">layers</span>
+                    <span class="skill-name">React / Next.js</span>
                 </div>
-                <div class="skill-tile">
-                    <svg class="skill-icon text-green" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
-                    <span>Node.js</span>
+                <div class="skill-chip">
+                    <span class="material-symbols-outlined text-secondary" data-icon="hub">hub</span>
+                    <span class="skill-name">Node.js</span>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="works-section">
-            <div class="works-header">
-                <div>
-                    <h2 class="section-heading">Selected Works</h2>
-                    <p class="section-subtext">A collection of engineering projects and research initiatives.</p>
+        <section class="projects-section" id="projects">
+            <div class="projects-header">
+                <div class="section-heading">
+                    <h3 class="section-title">Selected Works</h3>
+                    <p class="section-subtitle">A collection of engineering projects and research initiatives.</p>
                 </div>
-                <a href="https://github.com/milind7agarwal" target="_blank" class="explore-link">
-                    Explore all projects
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <a class="explore-all-link" href="#">
+                    Explore all projects <span class="material-symbols-outlined icon-arrow" data-icon="arrow_forward">arrow_forward</span>
                 </a>
             </div>
-
-            <div class="projects-stack">
+            <div class="projects-grid">
                 <div class="project-card">
-                    <div class="proj-img-holder">
-                        <img src="IOT-based project.jpg" alt="Real-time Chat Application" class="proj-image">
+                    <div class="project-img-wrapper">
+                        <img class="project-image" data-alt="Real-time chat interface configuration layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84qFyQv_OQs0EPCVXer734MT5W_d0xI8VHxo-dwidaK9vO2BwlCsVcYeiEUCbJMebohHqmbIBm-7vZx3QZ3xLlzxcUA96idptPuzrTl82GgCmlvVT0l0DHc8An1In2YZHE7EQNGu_o66E30syLKvJ8-SvMMDK1vyIY3vRXUlYZdwCZ3yF7MGBJR2-RWx0Giayqfe1TCl0vah4X8i2YJYSvyRtEsakPLDEDnpZ0za4lEg59CC3U1jRcg"/>
                     </div>
-                    <div class="proj-content">
-                        <div class="proj-tags">
+                    <div class="project-details">
+                        <div class="project-tags">
                             <span class="tag">WebSockets</span>
                             <span class="tag">Redis</span>
                         </div>
-                        <h3 class="proj-title">Real-time Chat Application</h3>
-                        <p class="proj-text">A high-performance messaging platform built with Node.js and Socket.io, featuring end-to-end encryption and sub-100ms latency.</p>
-                        <a href="https://chat-app-gamma-flax.vercel.app" target="_blank" class="case-study-link">
-                            View Case Study
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <h4 class="project-card-title">Real-time Chat Application</h4>
+                        <p class="project-card-desc">
+                            A high-performance messaging platform built with Node.js and Socket.io, featuring end-to-end encryption and sub-100ms latency.
+                        </p>
+                        <a class="project-cta-link" href="#">
+                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
                         </a>
                     </div>
                 </div>
-
                 <div class="project-card">
-                    <div class="proj-img-holder">
-                        <img src="MLproj.png" alt="AI Job Portal" class="proj-image">
+                    <div class="project-img-wrapper">
+                        <img class="project-image" data-alt="Dashboard interface layout configuration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1sVRlhUIGSdyoYIkXHU_1ZIh_0hQqT_cwv_zVZPu_FkePzQ_qLOpsZbO8MtI2U7VTA7UBjkeWYfY3N4F0jYX8N1Ay-vIOBT0rpOQl5QdOAY7SgsQDCj7waiSJn5dIEPYuzhLLsw8alb0yslo0WXoaJk9JfxqF32q5MdmVEBNk60yAPkEIn-jDO9Np8ulPhQS85a8Sci7vOzGzoQJBK0ysB6TXuPDyAf3KOSwrKe6tG9dVnXkNx6oC6Q"/>
                     </div>
-                    <div class="proj-content">
-                        <div class="proj-tags">
+                    <div class="project-details">
+                        <div class="project-tags">
                             <span class="tag">AI / ML</span>
                             <span class="tag">Next.js</span>
                         </div>
-                        <h3 class="proj-title">AI-Powered Job Portal</h3>
-                        <p class="proj-text">Intelligent recruitment engine utilizing NLP to match candidates with opportunities based on semantic skill and resume analysis parsing.</p>
-                        <a href="https://jobportal-one-kohl.vercel.app" target="_blank" class="case-study-link">
-                            View Case Study
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <h4 class="project-card-title">AI-Powered Job Portal</h4>
+                        <p class="project-card-desc">
+                            Intelligent recruitment engine utilizing NLP to match candidates with opportunities based on semantic skill analysis.
+                        </p>
+                        <a class="project-cta-link" href="#">
+                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
                         </a>
                     </div>
                 </div>
-
                 <div class="project-card">
-                    <div class="proj-img-holder">
-                        <img src="spotify-c.png" alt="Collaborative Code Editor" class="proj-image">
+                    <div class="project-img-wrapper">
+                        <img class="project-image" data-alt="Collaborative workspace structure interface design layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa2UzM7Ha-5XDO_yHTqMmudn97z2Mqy_42US_jaFQXFtbz-Ya2uGj7cg1I55xkAMNtvoOHwiTu44cw9WdfYcIWvx-s87LSvdFnaykRK_-kNN4bYCv-m1CilGGoGSuJkkrDhh5xQTFHyxJxXNfHlAkFO95VUkpLqD8zN71_lKB9sJJQVSax8wsV2sK0HVLevRNcwDoVF8dETd8UmxK3-GJIg1J1gVNAQZ3FkjYlxCCojGQMpFIEcqB0uQ"/>
                     </div>
-                    <div class="proj-content">
-                        <div class="proj-tags">
+                    <div class="project-details">
+                        <div class="project-tags">
                             <span class="tag">CRDTs</span>
                             <span class="tag">Wasm</span>
                         </div>
-                        <h3 class="proj-title">Collaborative Code Editor</h3>
-                        <p class="proj-text">A browser-based IDE supporting real-time multi-user editing using Conflict-free Replicated Data Types (Yjs) for seamless client sync.</p>
-                        <a href="http://collaborative-editor-alb-1960725216.ap-south-1.elb.amazonaws.com" target="_blank" class="case-study-link">
-                            View Case Study
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        <h4 class="project-card-title">Collaborative Code Editor</h4>
+                        <p class="project-card-desc">
+                            A browser-based IDE supporting real-time multi-user editing using Conflict-free Replicated Data Types for seamless sync.
+                        </p>
+                        <a class="project-cta-link" href="#">
+                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="contact-grid">
-                <div class="contact-info-block">
-                    <h2 class="section-heading">Get In Touch</h2>
-                    <p class="section-subtext">Have a project in mind or want to discuss the future of quantum computing? Drop me a message.</p>
-                    
-                    <div class="contact-details">
-                        <div class="info-row">
-                            <div class="info-icon-box">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <div class="contact-info">
+                    <h3 class="section-title">Get in Touch</h3>
+                    <p class="contact-pitch">
+                        Have a project in mind or want to discuss the future of quantum computing? Drop me a message.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <div class="contact-icon-frame">
+                                <span class="material-symbols-outlined" data-icon="mail">mail</span>
                             </div>
-                            <span class="info-text">milind.agarwal@example.com</span>
+                            <span class="contact-text">milind.agarwal@example.com</span>
                         </div>
-                        <div class="info-row">
-                            <div class="info-icon-box">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <div class="contact-item">
+                            <div class="contact-icon-frame">
+                                <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
                             </div>
-                            <span class="info-text">New Delhi, India</span>
+                            <span class="contact-text">New Delhi, India</span>
                         </div>
                     </div>
-
-                    <div class="action-buttons">
-                        <button class="square-btn" aria-label="Share Link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                        </button>
-                        <button class="square-btn" aria-label="Social Options">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                        </button>
+                    <div class="social-links">
+                        <a class="social-icon-btn" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
+                        <a class="social-icon-btn" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
                     </div>
                 </div>
-
-                <div class="contact-form-block">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="interactive-form">
-                        <input type="hidden" name="access_key" value="88d4e4d7-4f35-48bc-95f3-d65e42c08feb">
-                        
-                        <div class="input-wrapper">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
                             <label class="form-label">Full Name</label>
-                            <input type="text" name="name" placeholder="John Doe" required>
+                            <input class="form-input" placeholder="John Doe" type="text" required/>
                         </div>
-                        
-                        <div class="input-wrapper">
+                        <div class="form-group">
                             <label class="form-label">Email Address</label>
-                            <input type="email" name="email" placeholder="john@example.com" required>
+                            <input class="form-input" placeholder="john@example.com" type="email" required/>
                         </div>
-                        
-                        <div class="input-wrapper">
+                        <div class="form-group">
                             <label class="form-label">Message</label>
-                            <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
+                            <textarea class="form-textarea" placeholder="How can I help you?" rows="4" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button class="btn btn-primary btn-submit" type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-branding">
-                <span class="footer-name">Milind Agarwal</span>
-                <span class="footer-copyright">© 2026 Software Developer. All rights reserved.</span>
+            <div class="footer-copyright-area">
+                <span class="footer-brand">Milind Agarwal</span>
+                <span class="footer-separator">•</span>
+                <p class="footer-copy-text">© 2024 Software Developer. All rights reserved.</p>
             </div>
-            <div class="footer-links">
-                <a href="https://github.com/milind7agarwal" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/milind-agarwal07/" target="_blank">LinkedIn</a>
-                <a href="https://x.com/MILINDAGRA07" target="_blank">Twitter</a>
+            <div class="footer-social-links">
+                <a class="footer-link" href="#">GitHub</a>
+                <a class="footer-link" href="#">LinkedIn</a>
+                <a class="footer-link" href="#">Twitter</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Simple scroll spy for tracking dynamic navigation states
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission confirmation interface interaction
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = 'Message Sent!';
+                btn.classList.add('btn-success');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('btn-success');
+                    btn.disabled = false;
+                    e.target.reset();
+                }, 2000);
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
