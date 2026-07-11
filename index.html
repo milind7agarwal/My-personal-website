@@ -1,268 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Milind Agarwal | Software Developer & AI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo-area">
-                <span class="material-symbols-outlined icon-code" data-icon="code">code</span>
-                <span class="logo-text">DevPortfolio</span>
-            </div>
-            <nav class="nav-menu">
-                <a class="nav-link active" href="#hero">Home</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="btn btn-primary btn-nav" href="#contact">Contact</a>
-            </nav>
-            <button class="menu-mobile-btn">
-                <span class="material-symbols-outlined" data-icon="menu">menu</span>
-            </button>
-        </div>
-    </header>
-
-    <main class="main-container">
-        
-        <section class="hero-section" id="hero">
-            <div class="hero-content">
-                <div class="status-badge">
-                    <span class="pulse-dot"></span>
-                    <span class="badge-text">Available for new opportunities</span>
-                </div>
-                <h1 class="hero-title">Milind Agarwal</h1>
-                <h2 class="hero-subtitle">Software Developer & AI Engineer</h2>
-                <p class="hero-description">
-                    Specializing in building scalable web architectures and exploring the frontiers of Quantum Machine Learning. Dedicated to writing clean, maintainable code that solves real-world problems.
+    <main>
+        <div class="name" style="color: gray;"><b>Milind Agarwal</b></div>
+        <div class="description">
+            <img class="img" src="pic.jpg"/>
+            <div class="brief">
+                <p class="desc">My journey in computer engineering is driven by a deep-rooted passion for technology and sustainability. Each project and study phase has honed my skills in creating innovative and efficient tech solutions. My purpose is to merge this expertise with my commitment to sustainability, aiming to develop eco-friendly and impactful technological advancements. I am dedicated to contributing to a future where technology not only advances human capabilities but also protects and preserves our environment.
                 </p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary btn-with-icon" href="#">
-                        <span class="material-symbols-outlined" data-icon="download" src="MilindCV.pdf">download</span>
-                        Download CV
-                    </a>
-                    <a class="btn btn-outline" href="#projects">View Projects</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="avatar-frame">
-                    <img class="avatar-img" data-alt="A professional headshot of a software developer with a friendly and confident expression." src="pic.jpg"/>
-                </div>
-                <div class="floating-focus-box">
-                    <p class="focus-title">Focus Areas</p>
-                    <p class="focus-body">AI Engineer, Quantum Computing, Full-Stack Development</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="skills-section" id="skills">
-            <div class="section-heading">
-                <h3 class="section-title">Tech Stack</h3>
-                <p class="section-subtitle">Tools and technologies I use to bring ideas to life.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="terminal">terminal</span>
-                    <span class="skill-name">JavaScript</span>
-                </div>
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="database">database</span>
-                    <span class="skill-name">MongoDB</span>
-                </div>
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="cloud">cloud</span>
-                    <span class="skill-name">AWS</span>
-                </div>
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="functions">functions</span>
-                    <span class="skill-name">Express</span>
-                </div>
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="layers">layers</span>
-                    <span class="skill-name">React</span>
-                </div>
-                <div class="skill-chip">
-                    <span class="material-symbols-outlined text-secondary" data-icon="hub">hub</span>
-                    <span class="skill-name">Node.js</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects-section" id="projects">
-            <div class="projects-header">
-                <div class="section-heading">
-                    <h3 class="section-title">Selected Works</h3>
-                    <p class="section-subtitle">A collection of engineering projects and research initiatives.</p>
-                </div>
-                <a class="explore-all-link" href="#">
-                    Explore all projects <span class="material-symbols-outlined icon-arrow" data-icon="arrow_forward">arrow_forward</span>
+                <a href="MilindCV.pdf" download>
+                    <button>My Resume</button>
                 </a>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img class="project-image" data-alt="Real-time chat interface configuration layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD84qFyQv_OQs0EPCVXer734MT5W_d0xI8VHxo-dwidaK9vO2BwlCsVcYeiEUCbJMebohHqmbIBm-7vZx3QZ3xLlzxcUA96idptPuzrTl82GgCmlvVT0l0DHc8An1In2YZHE7EQNGu_o66E30syLKvJ8-SvMMDK1vyIY3vRXUlYZdwCZ3yF7MGBJR2-RWx0Giayqfe1TCl0vah4X8i2YJYSvyRtEsakPLDEDnpZ0za4lEg59CC3U1jRcg"/>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-tags">
-                            <span class="tag">WebSockets</span>
-                            <span class="tag">Redis</span>
-                        </div>
-                        <h4 class="project-card-title">Real-time Chat Application</h4>
-                        <p class="project-card-desc">
-                            A high-performance messaging platform built with Node.js and Socket.io, featuring end-to-end encryption and sub-100ms latency.
-                        </p>
-                        <a class="project-cta-link" href="#">
-                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
-                        </a>
-                    </div>
+        </div>
+        <div class="projects">
+            <div class="proj">Projects</div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="IOT-based project.jpg" class="card-img">
+                    <p class="card-title">finger print door lock</p>
+                    <p class="card-info">In this project we created a finger print controlled lock system that uses IOT to control the locking system. an app was created that help us to control the system</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img class="project-image" data-alt="Dashboard interface layout configuration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1sVRlhUIGSdyoYIkXHU_1ZIh_0hQqT_cwv_zVZPu_FkePzQ_qLOpsZbO8MtI2U7VTA7UBjkeWYfY3N4F0jYX8N1Ay-vIOBT0rpOQl5QdOAY7SgsQDCj7waiSJn5dIEPYuzhLLsw8alb0yslo0WXoaJk9JfxqF32q5MdmVEBNk60yAPkEIn-jDO9Np8ulPhQS85a8Sci7vOzGzoQJBK0ysB6TXuPDyAf3KOSwrKe6tG9dVnXkNx6oC6Q"/>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-tags">
-                            <span class="tag">AI / ML</span>
-                            <span class="tag">Next.js</span>
-                        </div>
-                        <h4 class="project-card-title">AI-Powered Job Portal</h4>
-                        <p class="project-card-desc">
-                            Intelligent recruitment engine utilizing NLP to match candidates with opportunities based on semantic skill analysis.
-                        </p>
-                        <a class="project-cta-link" href="#">
-                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
-                        </a>
-                    </div>
+                <div class="card">
+                    <img src="MLproj.png" class="card-img">
+                    <p class="card-title">Diamond Price Predictor</p>
+                    <p class="card-info">this project help us to to identify the price of diamond. I have used machine learning algorithm and got my database from kaggle to make this project a reality.</p>
+                    <a href="https://github.com/milind7agarwal/python-project/blob/main/diamond_price_predictor.ipynb">Github</a>
                 </div>
-                <div class="project-card">
-                    <div class="project-img-wrapper">
-                        <img class="project-image" data-alt="Collaborative workspace structure interface design layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa2UzM7Ha-5XDO_yHTqMmudn97z2Mqy_42US_jaFQXFtbz-Ya2uGj7cg1I55xkAMNtvoOHwiTu44cw9WdfYcIWvx-s87LSvdFnaykRK_-kNN4bYCv-m1CilGGoGSuJkkrDhh5xQTFHyxJxXNfHlAkFO95VUkpLqD8zN71_lKB9sJJQVSax8wsV2sK0HVLevRNcwDoVF8dETd8UmxK3-GJIg1J1gVNAQZ3FkjYlxCCojGQMpFIEcqB0uQ"/>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-tags">
-                            <span class="tag">CRDTs</span>
-                            <span class="tag">Wasm</span>
-                        </div>
-                        <h4 class="project-card-title">Collaborative Code Editor</h4>
-                        <p class="project-card-desc">
-                            A browser-based IDE supporting real-time multi-user editing using Conflict-free Replicated Data Types for seamless sync.
-                        </p>
-                        <a class="project-cta-link" href="#">
-                            View Case Study <span class="material-symbols-outlined icon-cta" data-icon="open_in_new">open_in_new</span>
-                        </a>
-                    </div>
+                <div class="card">
+                    <img src="spotify-c.png" class="card-img">
+                    <p class="card-title">Spotify Clone</p>
+                    <p class="card-info">it is a responsive clone of spotify website . A popular song streaming website , used to listen latest music and popular artist</p>
+                    <a href="https://github.com/milind7agarwal/spotify-clone">Github</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 class="section-title">Get in Touch</h3>
-                    <p class="contact-pitch">
-                        Have a project in mind or want to discuss the future of quantum computing? Drop me a message.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-item">
-                            <div class="contact-icon-frame">
-                                <span class="material-symbols-outlined" data-icon="mail">mail</span>
-                            </div>
-                            <span class="contact-text">milind.agarwal@example.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-frame">
-                                <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-                            </div>
-                            <span class="contact-text">New Delhi, India</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a class="social-icon-btn" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
-                        <a class="social-icon-btn" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
-                    </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label class="form-label">Full Name</label>
-                            <input class="form-input" placeholder="John Doe" type="text" required/>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email Address</label>
-                            <input class="form-input" placeholder="john@example.com" type="email" required/>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-textarea" placeholder="How can I help you?" rows="4" required></textarea>
-                        </div>
-                        <button class="btn btn-primary btn-submit" type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-copyright-area">
-                <span class="footer-brand">Milind Agarwal</span>
-                <span class="footer-separator">•</span>
-                <p class="footer-copy-text">© 2024 Software Developer. All rights reserved.</p>
-            </div>
-            <div class="footer-social-links">
-                <a class="footer-link" href="#">GitHub</a>
-                <a class="footer-link" href="#">LinkedIn</a>
-                <a class="footer-link" href="#">Twitter</a>
             </div>
         </div>
-    </footer>
+        <div class="skills">
+            <div class="proj">Skills</div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="download.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-1.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-2.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-5.png" alt="TypeScript">
+                    <p>TypeScript</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-6.png" alt="Angular">
+                    <p>Angular</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-3.png" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skill-card">
+                    <img src="download-4.png" alt="Git">
+                    <p>Git</p>
+                </div>
+                <div class="skill-card">
+                    <img src="python.png" alt="python">
+                    <p>Python</p>
+                </div>
+            </div>
+        </div>
+        <div class="Experience">
+            <div class="proj">Experience</div>
+        </div>
+        <div class="contact">
+            <div class="proj">Connect with me</div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/milind-agarwal-5517b4298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="social-icon" id="linkedin">
+                    <img src="linkdien.webp" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/milind7agarwal" class="social-icon" id="github">
+                    <img src="github.png" alt="GitHub">
+                </a>
+                <a href="https://x.com/MILINDAGRA07" class="social-icon" id="twitter">
+                    <img src="twitter.svg.webp" alt="Twitter">
+                </a>
+                <a href="#" class="social-icon" id="email">
+                    <img src="email.webp" alt="Email">
+                </a>
+            </div>
+        </div>
 
-    <script>
-        // Simple scroll spy for tracking dynamic navigation states
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-menu .nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 120) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        // Form submission confirmation interface interaction
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('.btn-submit');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'Sending...';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.innerHTML = 'Message Sent!';
-                btn.classList.add('btn-success');
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.classList.remove('btn-success');
-                    btn.disabled = false;
-                    e.target.reset();
-                }, 2000);
-            }, 1000);
-        });
-    </script>
-</body>
-</html>
+        <!-- Right Side: Contact Form -->
+        <div class="contact-section">
+            <h2>Send Me a Message</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="88d4e4d7-4f35-48bc-95f3-d65e42c08feb">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" id="con">Send</button>
+            </form>
+        </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>    
